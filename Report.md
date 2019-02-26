@@ -20,7 +20,7 @@ My lane detection pipeline is consisted of 5 steps. First, for each frame extrac
 ![Figure 1](/images/solidWhiteRight.jpg) ![Figure 2](images/solidWhiteRight_lanefinding.jpg)
 <p float="left">
   <img src="/images/solidWhiteRight.jpg" width="300" />
-  <img src="/images/solidWhiteRight_lanefinding.jpg" width="300" /> 
+  <img src="/images/solidWhiteRight_lanefinding.jpg" width="500" /> 
 </p>
 
 
