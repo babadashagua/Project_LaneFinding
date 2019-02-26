@@ -22,18 +22,21 @@ My lane detection pipeline is consisted of 5 steps. First, for each frame extrac
   <img src="/images/solidWhiteRight_lanefinding.png" width="400" alt="Fig. 2 image solidWhiteRight.jpg with lane marking" /> 
 </p>
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by seperate the result points after Hough transformation into two groups: left lane and right lane. For each lane group, I apply regression approach to find a single best-fitting line for the lane points. 
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by seperate the result points after Hough transformation into two groups: left lane and right lane. For each lane group, I apply regression approach to find a single best-fitting line for the lane points. After applying the modified draw_lines() function, the pipeline is able to draw a single line on each lane line, as show in the following right image.
 
 <p float="left">
   <img src="/images/solidWhiteRight.jpg" width="400" "/>
   <img src="/images/solidWhiteRight_solidline.png" width="400" /> 
 </p>
 
-![alt text][image1]
+I apply the developed pipeline to the video files located in the folder "test_videos", and the output videos are located in the folder "test_videos_output". The following left gif shows lane finding using single line on video "solidWhiteRight.mp4", the right gif shows lane finding using single line on video "solidYellowLeft.mp4". 
 
+<p float="left">
+  <img src="/images/solidWhiteRight_solidline.gif" width="400" "/>
+  <img src="/images/solidYellowLeft_solidline.gif" width="400" /> 
+</p>
 
 ### 2. Identify potential shortcomings with your current pipeline
-
 
 One potential shortcoming would be what would happen when ... 
 
