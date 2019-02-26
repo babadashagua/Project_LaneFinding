@@ -15,17 +15,19 @@ The goals / steps of this project are the following:
 
 ### 1. Lane Detection Pipeline
 
-My lane detection pipeline is consisted of 5 steps. First, for each frame extracted from a video, I converted the image to grayscale, then I blur the image using Gaussian bluring to remove noise and use Canny edge detection algorithm to detect edges in the image. Since only the lane line are of interest, in the third step, I apply a trapezoidal mask on the image to allow process of lane regions only in the following steps. In the fourth step, I apply Hough transformation to the masked area to find the lane lines. Finally, the detected lane lines are drawn on the image. 
+My lane detection pipeline is consisted of 5 steps. First, for each frame extracted from a video, I converted the image to grayscale, then I blur the image using Gaussian bluring to remove noise and use Canny edge detection algorithm to detect edges in the image. Since only the lane line are of interest, in the third step, I apply a trapezoidal mask on the image to allow process of lane regions only in the following steps. In the fourth step, I apply Hough transformation to the masked area to find the lane lines. Finally, the detected lane lines are drawn on the image. The following left image is from the img_test_results folder named "solidWhiteRight.jpg", the right image next to it shows the lane finding results after applying the developed pipeline.
 
 <p float="left">
   <img src="/images/solidWhiteRight.jpg" width="400" title="Fig. 1 raw image solidWhiteRight.jpg"/>
   <img src="/images/solidWhiteRight_lanefinding.png" width="400" alt="Fig. 2 image solidWhiteRight.jpg with lane marking" /> 
 </p>
 
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by seperate the result points after Hough transformation into two groups: left lane and right lane. For each lane group, I apply regression approach to find a single best-fitting line for the lane points. 
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+<p float="left">
+  <img src="/images/solidWhiteRight.jpg" width="400" "/>
+  <img src="/images/solidWhiteRight_solidline.png" width="400" /> 
+</p>
 
 ![alt text][image1]
 
