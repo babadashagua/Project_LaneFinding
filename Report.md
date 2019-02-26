@@ -17,7 +17,7 @@ The goals / steps of this project are the following:
 
 My lane detection pipeline is consisted of 5 steps. First, for each frame extracted from a video, I converted the image to grayscale, then I blur the image using Gaussian bluring to remove noise and use Canny edge detection algorithm to detect edges in the image. Since only the lane line are of interest, in the third step, I apply a trapezoidal mask on the image to allow process of lane regions only in the following steps. In the fourth step, I apply Hough transformation to the masked area to find the lane lines. Finally, the detected lane lines are drawn on the image. 
 
-#![Figure 1](/images/solidWhiteRight.jpg) ![Figure 2](images/solidWhiteRight_lanefinding.png)
+<>![Figure 1](/images/solidWhiteRight.jpg) ![Figure 2](images/solidWhiteRight_lanefinding.png)
 <p float="left">
   <img src="/images/solidWhiteRight.jpg" width="400" />
   <img src="/images/solidWhiteRight_lanefinding.png" width="400" /> 
