@@ -19,7 +19,7 @@ My lane detection pipeline is consisted of 5 steps. First, for each frame extrac
 
 ![Figure 1](images/solidWhiteRight.jpg)
 
-![Figure 2]（images/solidWhiteRightlanefinding.jpg）
+![Figure 2]（images/solidWhiteRight.jpg）
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
