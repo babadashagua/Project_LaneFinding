@@ -8,20 +8,17 @@
 
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
+* Shortcomings and further improvements on the existing work
 
-
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
-
----
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Lane Detection Pipeline
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+My lane detection pipeline is consisted of 5 steps. First, for each frame extracted from a video, I converted the image to grayscale, then I blur the image using Gaussian bluring to remove noise and use Canny edge detection algorithm to detect edges in the image. Since only the lane line are of interest, in the third step, I apply a trapezoidal mask on the image to allow process of lane regions only in the following steps. In the fourth step, I apply Hough transformation to the masked area to find the lane lines. Finally, the detected lane lines are drawn on the image. 
+
+![Figure 1](https://github.com/babadashagua/Project_LaneFinding/blob/master/images/solidWhiteRight.jpg)
+![Figure 2]（https://github.com/babadashagua/Project_LaneFinding/blob/master/images/solidWhiteRight_lanefinding.png）
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
