@@ -36,15 +36,11 @@ I apply the developed pipeline to the video files located in the folder "test_vi
   <img src="/images/solidYellowLeft_solidline.gif" width="400" /> 
 </p>
 
-### 2. Identify potential shortcomings with your current pipeline
+### 2. Shortcomings with Current Pipeline
 
-One potential shortcoming would be what would happen when ... 
+Shortcoming 1: to reduce detection error, I use a threshold to filter out the lines whose slope change is larger than the threshold. But it also results in slower convergence: there is a small mismatch between the drawn lane line and the real lane line.
 
-Another shortcoming could be ...
+### 3. Possible Improvements 
 
+Improvement 1: deploy better filter to filter out the outlier detected lane lines, such as Kalman filter. 
 
-### 3. Suggest possible improvements to your pipeline
-
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
