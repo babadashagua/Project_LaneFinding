@@ -13,7 +13,8 @@ import matplotlib.image as mpimg
 import numpy as np
 import cv2
 
-# functions used for lane finding
+# functions used for lane finding, except the hough_lines() and lane_finding() functions, other helper functions I used are from 
+# this project introduction.
 def grayscale(img):
     
     return cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
