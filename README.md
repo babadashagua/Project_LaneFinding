@@ -22,7 +22,7 @@ My lane detection pipeline is consisted of 5 steps. First, for each frame extrac
   <img src="/images/solidWhiteRight_lanefinding.png" width="400" alt="Fig. 2 image solidWhiteRight.jpg with lane marking" /> 
 </p>
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by seperate the result points after Hough transformation into two groups: left lane and right lane. For each lane group, I apply regression approach to find a single best-fitting line for the lane points. After applying the modified draw_lines() function, the pipeline is able to draw a single line on each lane line, as show in the following right image.
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by seperate the result points after Hough transformation into two groups: left lane and right lane. For each lane group, I apply regression approach to find a single best-fitting line for the lane points. After applying the modified draw_lines() function, the pipeline is able to draw a single line on each lane line, as show in the following right image. I also have applied the developed pipeline to all images in the folder "test_images", and the results are kept in "test_images_result".
 
 <p float="left">
   <img src="/images/solidWhiteRight.jpg" width="400" "/>
